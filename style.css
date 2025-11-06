@@ -63,6 +63,14 @@ body {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+@media (max-width: 750px) {
+    .content .head {
+        width: 100%;
+    }
+    .content .body {
+        width: 100%;
+    }
+}
 .content .body h1 {
     color: #00A2E8;
     font-size: 30px;
