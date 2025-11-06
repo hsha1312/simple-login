@@ -1,0 +1,116 @@
+@font-face {
+    font-family: elms-sans;
+    src: url(./font.ttf);
+}
+body {
+    background-color: #00A2E8;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    font-family: elms-sans;
+    margin-top: 200px;
+}
+.content .head {
+    color: gray;
+    font-size: 18px;
+    display: flex;
+    background-color: cyan;
+    width: 750px;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.content .head .a {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 5px;
+}
+.content .head .b {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: darkorange;
+    margin-right: 5px;
+}
+.content .head .c {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+    margin-right: 10px;
+}
+.content .head p {
+    margin: 0;
+}
+.content .body {
+    background-color: white;
+    width: 750px;
+    height: 500px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.content .body h1 {
+    color: #00A2E8;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.content .body h2 {
+    margin-top: 0px;
+    color: #00A2E8;
+    font-size: 18px;
+}
+.content .body input {
+    color: #00A2E8;
+    font-size: 15px;
+    font-family: elms-sans;
+    text-align: center;
+    width: 250px;
+    height: 25px;
+    border-color: #00A2E8;
+    border-style: solid;
+    outline: none;
+    border-radius: 5px;
+}
+.content .body input:hover {
+    background-color: rgb(218, 238, 247);
+}
+.content .body input::placeholder {
+    color: #86cfee;
+}
+.content .body input:focus {
+    border-color: #0471a0;
+}
+.content .body p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.content .body button {
+    font-size: 15px;
+    font-family: elms-sans;
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: #86cfee;
+    border-radius: 5px;
+}
+.content .body button:hover {
+    background-color: #00A2E8;
+}
+.content .body button:active {
+    background-color: #0471a0;
+}
