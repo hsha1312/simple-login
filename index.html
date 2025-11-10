@@ -16,15 +16,18 @@
                 <div class="a"></div>
                 <div class="b"></div>
                 <div class="c"></div>
-                <p>Log in to <span id="window_title"></span></p>
+                <p id="window_title">Log in to </p>
             </div>
-            <div class="body">
+            <div class="body" id="content_zone">
                 <h1>Log in</h1>
                 <h2>Enter your login details</h2>
                 <p>Your username:</p>
-                <input type="text" placeholder="User" title="Your username" id="usuario">
+                <input type="text" class="input_text" placeholder="User" title="Your username" id="usuario">
                 <p>Your password:</p>
-                <input type="password" placeholder="Password" title="Your password" id="contrasena">
+                <input type="password" class="input_text" placeholder="Password" title="Your password" id="contrasena">
+                <p></p>
+                <input type="checkbox" id="show_password" name="show_password" title="Show password">
+                <label for="show_password" class="checkbox_label">Show password</label>
                 <p></p>
                 <button title="Iniciar sesión" onclick="inicia_sesion()">Log in</button>
             </div>
