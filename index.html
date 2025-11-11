@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!--Configurar tipo-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--Color en dispositivo móviles-->
         <meta name="apple-mobile-web-app-status-bar" content="#00A2E8">
         <meta name="theme-color" content="#00A2E8">
-        <title>Log in</title>
-        <link rel="shortcut icon" type="image/ico" href="./favicon.png">
-        <link rel="stylesheet" href="./style.css">
+        <title>Log in</title><!--Título-->
+        <link rel="shortcut icon" type="image/ico" href="./favicon.png"><!--Icono de la página-->
+        <link rel="stylesheet" href="./style.css"><!--Aparencia-->
     </head>
     <body>
         <div class="content">
-            <div class="head">
-                <div class="a"></div>
-                <div class="b"></div>
-                <div class="c"></div>
-                <p id="window_title">Log in to </p>
+            <!--Contenido estilo MacOs-->
+            <div class="head"><!--Cabecera-->
+                <div class="a"></div><!--Botón cerrar-->
+                <div class="b"></div><!--Botón maxilizar-->
+                <div class="c"></div><!--Botón minilizar-->
+                <p id="window_title">Log in to </p><!--Título de la ventana-->
             </div>
-            <div class="body" id="content_zone">
+            <div class="body" id="content_zone"><!--Cuerpo-->
                 <h1>Log in</h1>
                 <h2>Enter your login details</h2>
-                <p>Your username:</p>
+                <p>Your username:</p><!--Nombre de usuario-->
                 <input type="text" class="input_text" placeholder="User" title="Your username" id="usuario">
-                <p>Your password:</p>
+                <p>Your password:</p><!--Contraseña-->
                 <input type="password" class="input_text" placeholder="Password" title="Your password" id="contrasena">
                 <p></p>
+                <!--Mostrar contraseña-->
                 <input type="checkbox" id="show_password" name="show_password" title="Show password">
                 <label for="show_password" class="checkbox_label">Show password</label>
                 <p></p>
+                <!--Iniciar sesión-->
                 <button title="Iniciar sesión" onclick="inicia_sesion()">Log in</button>
             </div>
         </div>
-        <script src="./script.js"></script>
+        <script src="./script.js"></script><!--Código para funcionar-->
     </body>
 </html>

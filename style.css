@@ -1,7 +1,9 @@
+/*Fuente personalizado*/
 @font-face {
     font-family: elms-sans;
     src: url(./font.ttf);
 }
+/*Animación: iniciarse desde arriba hacia abajo*/
 @keyframes initial_window {
     0% {
         opacity: 0;
@@ -12,22 +14,25 @@
         transform: translate(0);
     }
 }
+/*Cuerpo de la página*/
 html, body {
     padding: 0;
     margin: 0;
-    background-color: #00A2E8;
+    background-color: #00A2E8; /*Color del fondo*/
     text-align: center;
-    display: flex;
+    display: flex; /*Para que se quede en el centro*/
     align-items: center;
     justify-content: center;
 }
+/*Contenido: ventana*/
 .content {
-    font-family: elms-sans;
-    margin-top: 50px;
+    font-family: elms-sans; /*Fuente personalizado*/
+    margin-top: 50px; /*Pixel de bajada de ventana*/
     animation-name: initial_window;
     animation-duration: 1s;
     animation-iteration-count: initial;
 }
+/*Cabacera*/
 .content .head {
     color: gray;
     font-size: 18px;
@@ -43,34 +48,40 @@ html, body {
     padding-left: 14px;
     padding-right: 14px;
 }
+/*Utilizo el interfaz de macOs*/
+/*Círculo a*/
 .content .head .a {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: red;
+    background-color: red; /*Color rojo por botón cerrar*/
     margin-right: 5px;
     cursor: default;
 }
+/*Círculo b*/
 .content .head .b {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: darkorange;
+    background-color: darkorange; /*Color amarillo o naranja por botón maxilizar*/
     margin-right: 5px;
     cursor: default;
 }
+/*Círculo c*/
 .content .head .c {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: green;
+    background-color: green; /*Color verde por botón minilizar*/
     margin-right: 10px;
     cursor: default;
 }
+/*Párrafo: título de la ventana*/
 .content .head p {
     margin: 0;
     cursor: default;
 }
+/*Cuerpo*/
 .content .body {
     background-color: white;
     width: 750px;
@@ -83,35 +94,40 @@ html, body {
     border-bottom-right-radius: 10px;
     cursor: default;
 }
+/*Tamaño de cabecera y de cuerpo en dispositivo móviles*/
 @media (max-width: 750px) {
     html, body {
         display: block;
     }
     .content .head {
-        width: 100%;
+        width: 100%; /*Hará que se cubra toda la pantalla*/
     }
     .content .body {
-        width: 100%;
+        width: 100%; /*Hará que se cubra toda la pantalla*/
     }
 }
+/*Título cabecera 1*/
 .content .body h1 {
     color: #00A2E8;
     font-size: 30px;
     margin-bottom: 5px;
     cursor: default;
 }
+/*Error*/
 .content .body .error {
     color: #f16262;
     font-size: 30px;
     margin-bottom: 5px;
     cursor: default;
 }
+/*Subtítulo*/
 .content .body h2 {
     margin-top: 0px;
     color: #00A2E8;
     font-size: 18px;
     cursor: default;
 }
+/*Zona de casilla introccducir texto*/
 .content .body .input_text {
     color: #00A2E8;
     font-size: 15px;
@@ -125,15 +141,19 @@ html, body {
     border-radius: 5px;
     cursor: text;
 }
+/*Al colocar*/
 .content .body .input_text:hover {
     background-color: #daeef7;
 }
+/*Indicador*/
 .content .body .input_text::placeholder {
     color: #86cfee;
 }
+/*Al seleccinar*/
 .content .body .input_text:focus {
     border-color: #0471a0;
 }
+/*Chekbox para mostrar contraseña*/
 .content .body #show_password {
     width: 15px;
     height: 15px;
@@ -142,23 +162,28 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
 }
+/*Si está cojido*/
 .content .body #show_password:checked {
     accent-color: #17b6fa;
 }
+/*Texto alado del chekbox*/
 .content .body .checkbox_label {
     display: inline-block;
     justify-content: center;
     position: relative;
     cursor: pointer;
 }
+/*Párrafo del cuerpo*/
 .content .body p {
     margin-top: 10px;
     margin-bottom: 5px;
     cursor: default;
 }
+/*Código*/
 .content .body code {
     background-color: gainsboro;
 }
+/*Botón*/
 .content .body button {
     font-size: 15px;
     font-family: elms-sans;
@@ -170,9 +195,11 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
 }
+/*Al colocar*/
 .content .body button:hover {
     background-color: #00A2E8;
 }
+/*Al pulsar*/
 .content .body button:active {
     background-color: #0471a0;
 }
