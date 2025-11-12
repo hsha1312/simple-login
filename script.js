@@ -4,9 +4,10 @@ var contrasena = document.getElementById("contrasena");
 var text_title = document.getElementById("window_title");
 var testino_url = new URLSearchParams(window.location.search).get("gourl");
 var testino_title = new URLSearchParams(window.location.search).get("title");
-window.url_no_protocolo = ""
-var content_zone = document.getElementById("content_zone")
-var show_password = document.getElementById("show_password")
+window.url_no_protocolo = "";
+var content_zone = document.getElementById("content_zone");
+var show_password = document.getElementById("show_password");
+var url_title_sp = document.getElementById("url_title");
 
 // Cargar url
 function load_url() {
@@ -29,7 +30,14 @@ function load_url() {
             content_zone.innerHTML = `<h1 class=\"error\">Error</h1>
         <p>The one that has been put in the origin <code>?gourl=</code> is invalid.<p>
         <p>What you have entered is not of https or http origin, check if it is spelled correctly.</p>`
-        } else {
+        } else if (testino_url.split("/")[2] == "") {
+            console.error("Invalid URL: The URL you entered is not valid.")
+            text_title.textContent = "Invalid URL"
+            document.title = text_title.textContent + " | Log in"
+            content_zone.innerHTML = `<h1 class=\"error\">Error</h1>
+        <p>The URL you entered is not valid.<p>
+        <p>Check if the URL you entered is valid.</p>`
+        }else {
             // Si está correcto, ejercuta para obtener datos
             window.protocolo_dest = testino_url.split("/")[0] //Obtener protocolo
             text_title.textContent = "Log in to " + testino_url // Cambiar título de la ventana
@@ -50,9 +58,12 @@ function load_url() {
             text_title.textContent = "Log in to " + testino_title
             document.title = "Log in to " + testino_title + " | Log in"
             console.log("New title: " + testino_title)
+            url_title_sp.textContent = testino_title
         } else {
             console.warn("The parameter ?title= has not been defined, the title will be ?gourl= by default.")
+            url_title_sp.textContent = testino_url
         }
+        url_title_sp.href = testino_url
     } else {
         // Si el destino URL no está
         console.error("Destination URL error: The parameter ?gourl= is missing.")

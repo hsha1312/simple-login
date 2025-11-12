@@ -14,6 +14,14 @@
         transform: translate(0);
     }
 }
+@keyframes error_animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 /*Cuerpo de la página*/
 html, body {
     padding: 0;
@@ -31,6 +39,7 @@ html, body {
     animation-name: initial_window;
     animation-duration: 1s;
     animation-iteration-count: initial;
+    user-select: none;
 }
 /*Cabacera*/
 .content .head {
@@ -106,11 +115,24 @@ html, body {
         width: 100%; /*Hará que se cubra toda la pantalla*/
     }
 }
+/*Logo*/
+.content .body .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    pointer-events: none;
+}
+/*Tamaño de imagen*/
+.content .body .logo img {
+    width: 32px;
+    height: 32px;
+    padding-right: 10px;
+}
 /*Título cabecera 1*/
-.content .body h1 {
+.content .body .logo h1 {
     color: #00A2E8;
     font-size: 30px;
-    margin-bottom: 5px;
     cursor: default;
 }
 /*Error*/
@@ -126,6 +148,16 @@ html, body {
     color: #00A2E8;
     font-size: 18px;
     cursor: default;
+}
+/*Enlace de subtítulo*/
+.content .body h2 a {
+    text-decoration: none;
+    color: #00A2E8;
+    cursor: default;
+}
+.content .body h2 a:hover {
+    text-decoration: underline;
+    color: #0471a0;
 }
 /*Zona de casilla introccducir texto*/
 .content .body .input_text {
